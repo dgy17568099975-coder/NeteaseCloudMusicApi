@@ -1,0 +1,17 @@
+{
+  "buildCommand": "npm install",
+  "outputDirectory": ".",
+  "installCommand": "npm install",
+  "builds": [
+    {
+      "src": "app.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/app.js"
+    }
+  ]
+}
